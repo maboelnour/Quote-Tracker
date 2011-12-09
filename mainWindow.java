@@ -131,8 +131,10 @@ public class mainWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        
+
         String text  = jTextArea1.getText().trim();
+        if(text.equals(""))
+            return;
         String source = jTextField1.getText().trim();
         String tags_   = jTextField2.getText().trim();
         String[] tags = tags_.split(",");
@@ -140,7 +142,7 @@ public class mainWindow extends javax.swing.JFrame {
         String line = "<quote>\n";
         line += "\t<text>"+text+"</text>\n";
         line += "\t<source>"+source+"</source>\n";
-        
+
         for (int i = 0; i < tags.length; i++) {
 
             line += "\t<tag>"+tags[i]+"</tag>\n";
@@ -159,7 +161,7 @@ public class mainWindow extends javax.swing.JFrame {
             System.err.println("Error: " + e.getMessage());
         }
 
-        
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
