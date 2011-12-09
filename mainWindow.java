@@ -148,7 +148,7 @@ public class mainWindow extends javax.swing.JFrame {
             line += "\t<tag>"+tags[i]+"</tag>\n";
         }
         line +="</quote>\n";
-        System.out.println(line);
+        //System.out.println(line);
 
         try{
           // Create file
@@ -160,6 +160,9 @@ public class mainWindow extends javax.swing.JFrame {
         }catch (Exception e){//Catch exception if any
             System.err.println("Error: " + e.getMessage());
         }
+        jTextArea1.setText("");
+        jTextField1.setText("");
+        jTextField2.setText("");
 
 
     }//GEN-LAST:event_jButton1ActionPerformed
